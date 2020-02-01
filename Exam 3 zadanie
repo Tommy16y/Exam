@@ -1,0 +1,108 @@
+public class Main {
+
+    public static void main(String[] args) {
+        Backpack backpack = new Backpack ("Kola","apples","Book",20,"Ni4ego",0);
+        Backpack backpack1= new Backpack ( "Water","Tennisballs","Book",50,"ni4ego" ,0);
+        Backpack backpack2= new Backpack ( "Kola","Apples","Book",10,"Tennisballs" ,3);
+          backpack.botle ();
+          backpack1.botle ();
+
+
+    }
+}
+public interface Float {
+    void flot();
+
+
+}
+public interface Bootle {
+    void botle();
+}
+public interface Circly {
+    void circl();
+}
+public class Backpack implements  Bootle,Circly,Float{
+    private String btl;
+    private String cirl;
+    private String cirl2;
+    private String flt;
+    private int cirlSiz;
+    private int cirlSiz2;
+
+    public int getCirlSiz2() {
+        return cirlSiz2;
+    }
+
+    public void setCirlSiz2(int cirlSiz2) {
+        this.cirlSiz2 = cirlSiz2;
+    }
+
+    public String getCirl2() {
+        return cirl2;
+    }
+
+    public void setCirl2(String cirl2) {
+        this.cirl2 = cirl2;
+    }
+
+    public String getBtl() {
+        return btl;
+    }
+
+    public void setBtl(String btl) {
+        this.btl = btl;
+    }
+
+    public String getCirl() {
+        return cirl;
+    }
+
+    public void setCirl(String cirl) {
+        this.cirl = cirl;
+    }
+
+    public String getFlt() {
+        return flt;
+    }
+
+    public void setFlt(String flt) {
+        this.flt = flt;
+    }
+
+
+
+    public int getCirlSiz() {
+        return cirlSiz;
+    }
+
+    public void setCirlSiz(int cirlSiz) {
+        this.cirlSiz = cirlSiz;
+    }
+
+    public Backpack(String btl, String cirl, String flt, int cirlSiz,String cirl2,int cirlSiz2) {
+        this.btl = btl;
+        this.cirl = cirl;
+        this.flt = flt;
+       this.cirl2=cirl2;
+        this.cirlSiz = cirlSiz;
+        this.cirlSiz2=cirlSiz2;
+    }
+
+    @Override
+    public void botle() {
+        System.out.println ("У меня есть бутылкообразного:" +getBtl ());
+
+    }
+
+    @Override
+    public void circl() {
+        System.out.println ("У меня есть круглого :"+getCirlSiz ()+getCirl ()+"и ,"+getCirlSiz2 ()+getCirl2 ());
+
+    }
+
+    @Override
+    public void flot() {
+        System.out.println ("У меня есть плоского :"+getFlt ());
+
+    }
+}
