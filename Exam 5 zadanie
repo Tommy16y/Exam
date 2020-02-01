@@ -1,0 +1,24 @@
+public class Main {
+
+    public static void main(String[] args) {
+        Karman karman = new Karman ();
+        Karman karman1 = new Karman ();
+        karman.zvenit ();
+
+
+    }
+}
+public class Karman extends Bumajnoe implements Zvenit {
+
+    @Override
+    public void zvenit() {
+        System.out.println ("У меня что-то звенит");
+
+    }
+}
+public abstract class Bumajnoe   {
+    private String Bumaga;
+}
+public interface Zvenit{
+    void zvenit();
+}
